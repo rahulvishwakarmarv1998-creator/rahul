@@ -8,48 +8,42 @@
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f7fb;
+    font-family:Arial;
+    background:#f4f6fb;
+    scroll-behavior:smooth;
 }
 
 /* Navbar */
-.navbar{
+.nav{
     display:flex;
     justify-content:space-between;
-    align-items:center;
     background:#0f172a;
+    color:white;
     padding:15px 30px;
-    color:white;
 }
-.navbar a{
+.nav a{
     color:white;
-    text-decoration:none;
     margin:0 10px;
+    text-decoration:none;
 }
 
 /* Hero */
 .hero{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
-    background-size:cover;
-    height:80vh;
+    height:85vh;
     display:flex;
     justify-content:center;
     align-items:center;
     color:white;
     text-align:center;
 }
-.hero h1{
-    font-size:50px;
-}
-
-/* Button */
+.hero h1{font-size:50px;}
 .btn{
-    background:#f59e0b;
     padding:12px 25px;
+    background:#f59e0b;
     border:none;
     color:white;
-    font-size:16px;
     border-radius:5px;
     cursor:pointer;
 }
@@ -75,22 +69,38 @@ section{
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Stats */
-.stats{
+/* Teachers */
+.teacher img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Gallery */
+.gallery img{
+    width:250px;
+    height:160px;
+    margin:10px;
+    border-radius:10px;
+}
+
+/* Form */
+form{
     display:flex;
-    justify-content:center;
-    gap:40px;
-    background:#0f172a;
-    color:white;
-    padding:40px;
+    flex-direction:column;
+    width:300px;
+    margin:auto;
+}
+input{
+    padding:10px;
+    margin:5px 0;
 }
 
 /* Footer */
 footer{
     background:#0f172a;
     color:white;
-    text-align:center;
     padding:15px;
+    text-align:center;
 }
 </style>
 
@@ -98,12 +108,13 @@ footer{
 
 <body>
 
-<div class="navbar">
+<div class="nav">
     <h2>Rahul School</h2>
     <div>
-        <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </div>
 </div>
@@ -111,49 +122,63 @@ footer{
 <div class="hero">
     <div>
         <h1>Welcome to Rahul School</h1>
-        <p>Building Bright Future with Quality Education</p>
+        <p>Education for Bright Future</p>
         <button class="btn">Admission Open</button>
     </div>
 </div>
 
 <section id="about">
     <h2>About Us</h2>
-    <p>We provide quality education from Nursery to 12th with experienced teachers and modern facilities.</p>
+    <p>We provide quality education from Nursery to 12th with modern facilities and experienced teachers.</p>
 </section>
 
-<div class="stats">
-    <div>
-        <h2>500+</h2>
-        <p>Students</p>
-    </div>
-    <div>
-        <h2>50+</h2>
-        <p>Teachers</p>
-    </div>
-    <div>
-        <h2>20+</h2>
-        <p>Years Experience</p>
-    </div>
-</div>
-
 <section id="courses">
-    <h2>Our Courses</h2>
+    <h2>Courses</h2>
     <div class="cards">
         <div class="card">Nursery</div>
         <div class="card">Primary</div>
-        <div class="card">Middle School</div>
+        <div class="card">Middle</div>
         <div class="card">High School</div>
     </div>
 </section>
 
+<section id="teachers">
+    <h2>Our Teachers</h2>
+    <div class="cards">
+        <div class="card teacher">
+            <img src="https://via.placeholder.com/200x150">
+            <h3>Mr. Sharma</h3>
+            <p>Math Teacher</p>
+        </div>
+        <div class="card teacher">
+            <img src="https://via.placeholder.com/200x150">
+            <h3>Mrs. Verma</h3>
+            <p>Science Teacher</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div>
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+    </div>
+</section>
+
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@rahulschool.com</p>
-    <p>Phone: +91 9876543210</p>
+    <h2>Admission Form</h2>
+    <form>
+        <input type="text" placeholder="Student Name">
+        <input type="text" placeholder="Class">
+        <input type="text" placeholder="Phone Number">
+        <button class="btn" type="submit">Submit</button>
+    </form>
 </section>
 
 <footer>
-    <p>© 2026 Rahul School | All Rights Reserved</p>
+    © 2026 Rahul School
 </footer>
 
 </body>

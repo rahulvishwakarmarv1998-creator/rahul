@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav><h2>Student Login</h2></nav>
+
+<div class="container">
+
+<input id="user" placeholder="Username"><br><br>
+<input id="pass" type="password" placeholder="Password"><br><br>
+
+<button class="btn" onclick="login()">Login</button>
+
+<h3 id="msg"></h3>
+
+</div>
+
+<script>
+function login(){
+    let u=document.getElementById("user").value;
+    let p=document.getElementById("pass").value;
+
+    if(u=="student" && p=="1234"){
+        localStorage.setItem("user",u);
+        window.location.href="dashboard.html";
+    }else{
+        document.getElementById("msg").innerText="Invalid Login";
+    }
+}
+</script>
+
+</body>
+</html>

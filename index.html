@@ -6,101 +6,117 @@
 <title>Rahul School</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial;
-    background:#f4f6fb;
-    scroll-behavior:smooth;
 }
 
-/* Navbar */
-.nav{
+body{
+    background:#f6f8fc;
+    color:#111;
+}
+
+/* NAVBAR */
+nav{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     background:#0f172a;
-    color:white;
     padding:15px 30px;
+    color:white;
 }
-.nav a{
+nav a{
     color:white;
     margin:0 10px;
     text-decoration:none;
+    font-weight:500;
 }
 
-/* Hero */
+/* HERO */
 .hero{
+    height:85vh;
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
-    height:85vh;
+    background-size:cover;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
     text-align:center;
-}
-.hero h1{font-size:50px;}
-.btn{
-    padding:12px 25px;
-    background:#f59e0b;
-    border:none;
     color:white;
-    border-radius:5px;
+}
+.hero h1{
+    font-size:55px;
+}
+.btn{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    background:#f59e0b;
+    color:white;
+    border-radius:6px;
     cursor:pointer;
+    font-size:16px;
 }
 
-/* Sections */
+/* SECTION */
 section{
     padding:60px 20px;
     text-align:center;
 }
 
-/* Cards */
+/* CARDS */
 .cards{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
+    flex-wrap:wrap;
     gap:20px;
+    margin-top:20px;
 }
 .card{
     background:white;
     padding:20px;
     width:220px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* Teachers */
-.teacher img{
-    width:100%;
-    border-radius:10px;
+/* GALLERY FIX (IMPORTANT) */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    padding:20px;
 }
-
-/* Gallery */
 .gallery img{
-    width:250px;
-    height:160px;
-    margin:10px;
-    border-radius:10px;
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
 }
 
-/* Form */
+/* FORM */
 form{
+    max-width:350px;
+    margin:auto;
     display:flex;
     flex-direction:column;
-    width:300px;
-    margin:auto;
+    gap:10px;
 }
 input{
-    padding:10px;
-    margin:5px 0;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
     background:#0f172a;
     color:white;
-    padding:15px;
     text-align:center;
+    padding:15px;
+    margin-top:30px;
 }
 </style>
 
@@ -108,32 +124,31 @@ footer{
 
 <body>
 
-<div class="nav">
+<nav>
     <h2>Rahul School</h2>
     <div>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
-        <a href="#teachers">Teachers</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </div>
-</div>
+</nav>
 
 <div class="hero">
     <div>
-        <h1>Welcome to Rahul School</h1>
-        <p>Education for Bright Future</p>
+        <h1>Rahul School</h1>
+        <p>Building Bright Future with Quality Education</p>
         <button class="btn">Admission Open</button>
     </div>
 </div>
 
 <section id="about">
-    <h2>About Us</h2>
-    <p>We provide quality education from Nursery to 12th with modern facilities and experienced teachers.</p>
+    <h2>About School</h2>
+    <p>We provide quality education from Nursery to 12th with experienced teachers and modern facilities.</p>
 </section>
 
 <section id="courses">
-    <h2>Courses</h2>
+    <h2>Our Courses</h2>
     <div class="cards">
         <div class="card">Nursery</div>
         <div class="card">Primary</div>
@@ -142,28 +157,13 @@ footer{
     </div>
 </section>
 
-<section id="teachers">
-    <h2>Our Teachers</h2>
-    <div class="cards">
-        <div class="card teacher">
-            <img src="https://via.placeholder.com/200x150">
-            <h3>Mr. Sharma</h3>
-            <p>Math Teacher</p>
-        </div>
-        <div class="card teacher">
-            <img src="https://via.placeholder.com/200x150">
-            <h3>Mrs. Verma</h3>
-            <p>Science Teacher</p>
-        </div>
-    </div>
-</section>
-
 <section id="gallery">
-    <h2>Gallery</h2>
-    <div>
-        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655">
+    <h2>School Gallery</h2>
+    <div class="gallery">
         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585">
     </div>
 </section>
 
@@ -178,7 +178,7 @@ footer{
 </section>
 
 <footer>
-    © 2026 Rahul School
+    © 2026 Rahul School | All Rights Reserved
 </footer>
 
 </body>

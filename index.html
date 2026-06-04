@@ -37,7 +37,6 @@ nav a{
     margin:0 12px;
     text-decoration:none;
     font-weight:500;
-    transition:0.3s;
 }
 nav a:hover{
     color:#fbbf24;
@@ -58,7 +57,6 @@ nav a:hover{
 
 .hero h1{
     font-size:60px;
-    animation:fadeIn 1s ease-in;
 }
 
 .hero p{
@@ -80,12 +78,6 @@ nav a:hover{
 .btn:hover{
     background:#d97706;
     transform:scale(1.05);
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
 }
 
 /* SECTION */
@@ -114,6 +106,10 @@ h2{
     width:180px;
     border-radius:12px;
     box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.stat-box:hover{
+    transform:translateY(-5px);
 }
 
 .stat-box h3{
@@ -181,6 +177,16 @@ h2{
     text-align:left;
 }
 
+/* TESTIMONIAL */
+.testimonial{
+    background:white;
+    padding:20px;
+    margin:10px auto;
+    max-width:700px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
 /* FOOTER */
 footer{
     background:#0f172a;
@@ -202,6 +208,13 @@ footer{
     text-decoration:none;
     font-weight:bold;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
 }
 </style>
 
@@ -219,6 +232,7 @@ footer{
         <a href="#faculty">Faculty</a>
         <a href="#gallery">Gallery</a>
         <a href="#notice">Notice</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -228,7 +242,9 @@ footer{
     <div>
         <h1>Rahul School</h1>
         <p>Excellence in Education • Discipline • Future Growth</p>
-        <button class="btn">Admission Open</button>
+        <a href="#contact" class="btn" style="text-decoration:none;display:inline-block;">
+            Admission Open
+        </a>
     </div>
 </div>
 
@@ -236,8 +252,8 @@ footer{
 <section id="about">
     <h2>About School</h2>
     <p style="max-width:800px;margin:auto;line-height:1.7;">
-        Rahul School is a modern learning institution committed to academic excellence and holistic development.
-        We focus on innovation, discipline, and skill-based education to prepare students for real-world success.
+        Rahul School is a modern learning institution committed to academic excellence, discipline, and holistic student development.
+        We prepare students for real-world success through innovation and strong values.
     </p>
 </section>
 
@@ -245,22 +261,10 @@ footer{
 <section id="stats">
     <h2>Our Achievements</h2>
     <div class="stats">
-        <div class="stat-box">
-            <h3>1200+</h3>
-            <p>Students</p>
-        </div>
-        <div class="stat-box">
-            <h3>80+</h3>
-            <p>Teachers</p>
-        </div>
-        <div class="stat-box">
-            <h3>25+</h3>
-            <p>Years Experience</p>
-        </div>
-        <div class="stat-box">
-            <h3>100%</h3>
-            <p>Result</p>
-        </div>
+        <div class="stat-box"><h3>1200+</h3><p>Students</p></div>
+        <div class="stat-box"><h3>80+</h3><p>Teachers</p></div>
+        <div class="stat-box"><h3>25+</h3><p>Years</p></div>
+        <div class="stat-box"><h3>100%</h3><p>Result</p></div>
     </div>
 </section>
 
@@ -310,6 +314,19 @@ footer{
         📢 Annual Function Coming Soon<br>
         📢 Sports Day Next Month<br>
         📢 Parent Meeting Every Saturday
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <h2>What Parents Say</h2>
+
+    <div class="testimonial">
+        “Excellent school with modern teaching methods. My child improved a lot.”
+    </div>
+
+    <div class="testimonial">
+        “Very disciplined environment and highly qualified teachers.”
     </div>
 </section>
 
